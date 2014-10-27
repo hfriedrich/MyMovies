@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Builder;
+using Microsoft.AspNet.Routing;
 using Microsoft.Framework.DependencyInjection;
 
 namespace MyMovies
@@ -8,7 +9,13 @@ namespace MyMovies
         public void Configure(IApplicationBuilder app)
         {
             app.UseServices(service => service.AddMvc());
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller}/{action}/{id?}",
+                    defaults: new { controller = "Home", action = "Index" });
+            });
         }
     }
 }
