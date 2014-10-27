@@ -9,6 +9,7 @@ namespace MyMovies
         public void Configure(IApplicationBuilder app)
         {
             app.UseServices(service => service.AddMvc());
+            app.UseStaticFiles();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
