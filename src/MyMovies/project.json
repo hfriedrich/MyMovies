@@ -1,12 +1,16 @@
 ﻿{
-    "webroot" : "wwwroot",
+    "webroot": "wwwroot",
     "exclude": "wwwroot/**/*.*",
     "dependencies": {
-        "Microsoft.AspNet.Server.IIS": "1.0.0-alpha4",
+        "Microsoft.AspNet.Hosting": "1.0.0-alpha4",
+        "Microsoft.AspNet.Server.WebListener": "1.0.0-alpha4",
         "Microsoft.AspNet.Diagnostics": "1.0.0-alpha4"
     },
-    "frameworks" : {
-        "aspnet50" : { },
-        "aspnetcore50" : { }
+    "frameworks": {
+        "aspnet50": { },
+        "aspnetcore50": { }
+    },
+    "commands": { 
+        "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener"
     }
 }
