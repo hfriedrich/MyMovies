@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Builder;
+using Microsoft.Framework.DependencyInjection;
 
 namespace MyMovies
 {
@@ -6,7 +7,8 @@ namespace MyMovies
     {
         public void Configure(IApplicationBuilder app)
         {
-            app.UseWelcomePage();
+            app.UseServices(service => service.AddMvc());
+            app.UseMvc();
         }
     }
 }
