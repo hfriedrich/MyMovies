@@ -1,8 +1,18 @@
-﻿@{
+﻿@using MovieImportService
+@model IEnumerable<Movie>
+
+@{
     ViewBag.Title = "My Movies";
 }
 
 <div class="jumbotron">
     <h1>My Movies</h1>
-    <p class="lead">Your personal movie database manager.</p>
+    <p class="lead">Your personal movie wish list.</p>
+</div>
+
+<div class="container availableMovies">
+    <header>Available movies</header>
+    <div class="row">
+        @Html.DisplayForModel()
+    </div>
 </div>

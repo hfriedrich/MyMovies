@@ -1,13 +1,21 @@
 ﻿using Microsoft.AspNet.Mvc;
+using MovieImportService;
 
 namespace MyMovies.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: /<controller>/
+        private readonly IMovieImporter _movieImporter;
+
+        public HomeController(IMovieImporter movieImporter)
+        {
+            _movieImporter = movieImporter;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            var model = _movieImporter.ImportMovies();
+            return View(model);
         }
     }
 }

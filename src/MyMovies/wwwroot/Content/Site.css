@@ -41,3 +41,79 @@ input[type="checkbox"].input-validation-error {
     display: none;
 }
 
+.availableMovies {
+    border: #101010 1px solid;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.availableMovies header {
+    font-size: 36px;
+    padding: 10px 0 10px 0;
+    text-align: center;
+}
+
+.tile {
+    overflow: hidden;
+    float:left;
+    position: relative;
+    width: 21%;
+    padding-bottom : 21%;
+    margin:2%;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.tile::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    transition: background .35s ease-out;
+}
+
+.tile:hover::before {
+    background: rgba(0, 0, 0, .5);
+}
+
+.tile .caption {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    color: white;
+
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+
+    transition: -webkit-transform .35s ease-out;
+    transition:         transform .35s ease-out;
+}
+
+.tile:hover .caption {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}
+
+.tile .caption .title {
+    -webkit-transform: translateY( -webkit-calc(-100% - 10px) );
+            transform: translateY( calc(-100% - 50px) );
+
+    transition: -webkit-transform .35s ease-out;
+    transition:         transform .35s ease-out;
+}
+
+.tile:hover .caption .title {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+}

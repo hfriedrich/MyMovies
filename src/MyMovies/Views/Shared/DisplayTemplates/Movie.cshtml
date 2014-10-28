@@ -1,0 +1,9 @@
+﻿@using MovieImportService
+@model Movie
+
+
+<div class="tile" style="background-image: url('@Html.Raw(Model.ImageUrl)')">
+    <div class="caption">
+        <h1 class="title">@Html.DisplayFor(m => m.Title)</h1>
+    </div>
+</div>

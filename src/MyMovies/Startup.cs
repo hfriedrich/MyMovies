@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Routing;
 using Microsoft.Framework.DependencyInjection;
+using MovieFileImport;
+using MovieImportService;
 
 namespace MyMovies
 {
@@ -8,7 +10,7 @@ namespace MyMovies
     {
         public void Configure(IApplicationBuilder app)
         {
-            app.UseServices(service => service.AddMvc());
+            app.UseServices(service => service.AddMvc().AddScoped<IMovieImporter, MovieFileImporter>());
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {
