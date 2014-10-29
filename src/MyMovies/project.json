@@ -10,7 +10,12 @@
     "Microsoft.AspNet.StaticFiles": "1.0.0-alpha4",
     "MovieImportService": "",
     "MovieFileImport": "",
-    "K.Linq": "1.0.0-alpha4"
+    "K.Linq": "1.0.0-alpha4",
+    "EntityFramework.SqlServer": "7.0.0-alpha4",
+    "EntityFramework.InMemory": "7.0.0-alpha4",
+    "Microsoft.AspNet.Identity.SqlServer": "3.0.0-alpha4",
+    "Microsoft.AspNet.Identity.Authentication": "3.0.0-alpha4",
+    "Microsoft.AspNet.Security.Cookies": "1.0.0-alpha4",
   },
   "frameworks": {
     "aspnet50": {},
