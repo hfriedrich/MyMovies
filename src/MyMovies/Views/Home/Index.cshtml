@@ -5,6 +5,27 @@
     ViewBag.Title = "My Movies";
 }
 
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            $(".tile").click(function () {
+                var self = $(this);
+                var movieId = self.find(".id").val();
+                $.ajax({
+                    url: "MyFavourites",
+                    type: "PUT",
+                    data: { id: movieId }
+                })
+                .done(function () {
+                    self.fadeOut()
+                });
+
+                
+            });
+        });
+    </script>
+}
+
 <div class="jumbotron">
     <h1>My Movies</h1>
     <p class="lead">Your favourite movies.</p>
@@ -16,3 +37,4 @@
         @Html.DisplayForModel()
     </div>
 </div>
+

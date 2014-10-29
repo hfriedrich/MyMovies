@@ -84,6 +84,7 @@ input[type="checkbox"].input-validation-error {
 .tile:hover::before {
     background: rgba(0, 0, 0, .5);
     border-radius: 6px;
+    cursor: pointer;
 }
 
 .tile .caption {
@@ -96,7 +97,7 @@ input[type="checkbox"].input-validation-error {
     color: white;
 
     -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+    transform: translateY(100%);
 
     transition: -webkit-transform .35s ease-out;
     transition:         transform .35s ease-out;
@@ -104,12 +105,13 @@ input[type="checkbox"].input-validation-error {
 
 .tile:hover .caption {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
+    cursor: pointer;
 }
 
 .tile .caption .title {
     -webkit-transform: translateY( -webkit-calc(-100% - 10px) );
-            transform: translateY( calc(-100% - 50px) );
+    transform: translateY( calc(-100% - 50px) );
 
     transition: -webkit-transform .35s ease-out;
     transition:         transform .35s ease-out;
@@ -117,5 +119,6 @@ input[type="checkbox"].input-validation-error {
 
 .tile:hover .caption .title {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
+    cursor: pointer;
 }
