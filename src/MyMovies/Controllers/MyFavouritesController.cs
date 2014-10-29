@@ -5,10 +5,13 @@ using System.Linq;
 
 namespace MyMovies.Controllers
 {
-    public class MyFavouritesController : Controller
+    public class MyFavouritesController
     {
         private static HashSet<string> _favouriteIds;
         private readonly IMovieImporter _movieImporter;
+
+        [Activate]
+        public ViewDataDictionary ViewData { get; set; }
 
         public MyFavouritesController(IMovieImporter movieImporter)
         {
@@ -20,7 +23,8 @@ namespace MyMovies.Controllers
         {
             var allMovies = _movieImporter.ImportMovies();
             var model = allMovies.Where(m => GetFavouriteIds().Contains(m.Id)).ToList();
-            return View(model);
+            ViewData.Model = model;
+            return new ViewResult() { ViewData = ViewData };
         }
 
         public void Put(string id)

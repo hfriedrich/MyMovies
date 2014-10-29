@@ -3,9 +3,12 @@ using MovieImportService;
 
 namespace MyMovies.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController
     {
         private readonly IMovieImporter _movieImporter;
+
+        [Activate]
+        public ViewDataDictionary ViewData { get; set; }
 
         public HomeController(IMovieImporter movieImporter)
         {
@@ -15,7 +18,8 @@ namespace MyMovies.Controllers
         public IActionResult Index()
         {
             var model = _movieImporter.ImportMovies();
-            return View(model);
+            ViewData.Model = model;
+            return new ViewResult() { ViewData = ViewData };
         }
     }
 }
