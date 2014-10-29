@@ -36,5 +36,9 @@ namespace MyMovies.Controllers
             }
             return _favouriteIds;
         }
+
+        public void Put(string id)
+        {
+        }
     }
 }
