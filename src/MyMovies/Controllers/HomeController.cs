@@ -3,6 +3,7 @@ using MovieImportService;
 
 namespace MyMovies.Controllers
 {
+    [Authorize]
     public class HomeController
     {
         private readonly IMovieImporter _movieImporter;

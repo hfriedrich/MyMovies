@@ -5,6 +5,7 @@ using System.Linq;
 
 namespace MyMovies.Controllers
 {
+    [Authorize]
     public class MyFavouritesController
     {
         private static HashSet<string> _favouriteIds;
