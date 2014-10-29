@@ -3,6 +3,7 @@
 
 
 <div class="tile" style="background-image: url('@Html.Raw(Model.ImageUrl)')">
+    @Html.HiddenFor(m => m.Id, new { @class ="id" })
     <div class="caption">
         <h1 class="title">@Html.DisplayFor(m => m.Title)</h1>
     </div>

@@ -18,6 +18,7 @@ namespace MyMovies
                     name: "default",
                     template: "{controller}/{action}/{id?}",
                     defaults: new { controller = "Home", action = "Index" });
+                routes.MapRoute(name: "ApiRoute", template: "{controller}/{id?}");
             });
         }
     }
