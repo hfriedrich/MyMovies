@@ -12,6 +12,7 @@ namespace MyMovies
         {
             app.UseServices(service => service.AddMvc().AddScoped<IMovieImporter, MovieFileImporter>());
             app.UseStaticFiles();
+            app.UseErrorPage();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
