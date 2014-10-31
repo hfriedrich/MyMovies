@@ -1,29 +1,30 @@
 ﻿{
-  "webroot": "wwwroot",
-  "exclude": "wwwroot/**/*.*",
-  "dependencies": {
-    "Microsoft.AspNet.Hosting": "1.0.0-alpha4",
-    "Microsoft.AspNet.Server.WebListener": "1.0.0-alpha4",
-    "Kestrel": "1.0.0-alpha4",
-    "Microsoft.AspNet.Diagnostics": "1.0.0-alpha4",
-    "Microsoft.AspNet.Mvc": "6.0.0-alpha4",
-    "Microsoft.AspNet.StaticFiles": "1.0.0-alpha4",
-    "MovieImportService": "",
-    "MovieFileImport": "",
-    "K.Linq": "1.0.0-alpha4",
-    "EntityFramework.SqlServer": "7.0.0-alpha4",
-    "EntityFramework.InMemory": "7.0.0-alpha4",
-    "Microsoft.AspNet.Identity.SqlServer": "3.0.0-alpha4",
-    "Microsoft.AspNet.Identity.Authentication": "3.0.0-alpha4",
-    "Microsoft.AspNet.Security.Cookies": "1.0.0-alpha4",
-  },
-  "frameworks": {
-    "aspnet50": {},
-    "aspnetcore50": {}
-  },
-  "commands": {
-    "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener",
-    "webwithurl": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000",
-    "kestrel": "Microsoft.AspNet.Hosting --server Kestrel --server.urls http://localhost:5000"
-  }
+    "webroot": "wwwroot",
+    "exclude": "wwwroot/**/*.*",
+    "dependencies": {
+        "Microsoft.AspNet.Hosting": "1.0.0-alpha4",
+        "Microsoft.AspNet.Server.WebListener": "1.0.0-alpha4",
+        "Kestrel": "1.0.0-alpha4",
+        "Microsoft.AspNet.Diagnostics": "1.0.0-alpha4",
+        "Microsoft.AspNet.Mvc": "6.0.0-alpha4",
+        "Microsoft.AspNet.StaticFiles": "1.0.0-alpha4",
+        "MovieImportService": "",
+        "MovieFileImport": "",
+        "K.Linq": "1.0.0-alpha4",
+        "EntityFramework.SqlServer": "7.0.0-alpha4",
+        "EntityFramework.InMemory": "7.0.0-alpha4",
+        "Microsoft.AspNet.Identity.SqlServer": "3.0.0-alpha4",
+        "Microsoft.AspNet.Identity.Authentication": "3.0.0-alpha4",
+        "Microsoft.AspNet.Security.Cookies": "1.0.0-alpha4",
+        "System.IO.FileSystem": "4.0.0.0"
+    },
+    "frameworks": {
+        "aspnet50": { },
+        "aspnetcore50": { }
+    },
+    "commands": {
+        "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener",
+        "webwithurl": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000",
+        "kestrel": "Microsoft.AspNet.Hosting --server Kestrel --server.urls http://localhost:5001",
+    }
 }

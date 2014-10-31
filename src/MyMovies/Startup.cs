@@ -6,8 +6,10 @@ using MovieImportService;
 using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Security.Cookies;
+using MyMovies.Filters;
 using MyMovies.Models;
 using MyMovies.Database;
+using Microsoft.AspNet.Mvc;
 
 namespace MyMovies
 {
@@ -23,7 +25,10 @@ namespace MyMovies
                 services.AddIdentitySqlServer<ApplicationDbContext, ApplicationUser>()
                     .AddAuthentication();
 
-                services.AddMvc().AddScoped<IMovieImporter, MovieFileImporter>();
+                services.AddMvc()
+                .SetupOptions<MvcOptions>(options =>
+                    { options.Filters.Add(new LogRequestFilter()); })
+                .AddScoped<IMovieImporter, MovieFileImporter>();
             });
             app.UseStaticFiles();
             app.UseErrorPage();

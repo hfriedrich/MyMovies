@@ -1,7 +1,12 @@
-﻿{
-    "Data": {
-        "FileWithMovies": { 
-            "Path": "c:/data/movies.json"
+﻿    {
+        "Data": {
+            "FileWithMovies": {
+                "Path": "c:/data/movies.json"
+            }
+        },
+        "Log": {
+            File: { 
+                "Path": "c:/logs/log.txt"
+            }
         }
-    }
 }
